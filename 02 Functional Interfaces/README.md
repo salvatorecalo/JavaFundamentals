@@ -4,7 +4,7 @@ Sono interfacce aventi un singolo metodo. Possono essere implementate come inter
 
 Esistono alcune interfacce funzionali pre-dichiarate all'interno delle librerie standard Java. Tra queste è di rilevante importanza l'interfaccia funzionale `Comparator`, che definisce un unico metodo, avente la seguente forma:
 
-`public int comapre(Object o1, Object o2)`
+`public int compare(Object o1, Object o2)`
 
 
 Tale interfaccia funzionale è fondamentale poiché permette di costruire algoritmi di ordinamento efficienti e personalizzati. Nel seguito verrà illustrato come implementare suddetta interfaccia funzionale in tre modi differenti.
