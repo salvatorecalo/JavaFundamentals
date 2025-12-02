@@ -80,12 +80,12 @@ Il loro scopo è quello di restituire una `Map` costruita dallo stream
 
 ### groupingBy
 
-Necessita come parametro un oggetto di una classe che implementa l'interfaccia `Function<T, K>` detto "classificatore". Lo scopo del classificatore è quello di applicare l'unico metodo dell'interfaccia, ovverro `<K> apply(<T> t)` sugli elementi dello stream estraendone un valore che farà da chiave. A ciascuna chiave corrisponde un "Downstream collector", di default si tratta di una lista, e l'elemento che ha prodotto quella chiave viene aggiunto alla lista corrsipondente.
+Necessita come parametro un oggetto di una classe che implementa l'interfaccia `Function<T, K>` detto "classificatore". Lo scopo del classificatore è quello di applicare l'unico metodo dell'interfaccia, ovverro `<K> apply(<T> t)` sugli elementi dello stream estraendone un valore che farà da chiave. A ciascuna chiave corrisponde un "Downstream collector", di default si tratta di una lista, e l'elemento che ha prodotto quella chiave viene aggiunto alla lista corrispondente.
 
 Precisamente avviene questo:
 
-1) Ogni elmento dello stream passa per il classificatore
-2) Il risultato del classificatore (la chiave) sperara gli elementi in **più stream diversi**
+1) Ogni elemento dello stream passa per il classificatore
+2) Il risultato del classificatore (la chiave) separa gli elementi in **più stream diversi**
 3) Ciascuno di questi implicitamente termina con l'istruzione `.collect(Collectors.toList())`
 4) Ognuna delle liste prodotte viene aggiunta ad una `Map<K, List<T> >`
 
@@ -93,12 +93,12 @@ Quando diciamo che è possibile specificare un "downstream collector" ci riferia
 
 #### Esempio
 
-Partiamo da uno stream di stringhe e decidiamo di raggruparre tali tali stringhe per la loro lunghezza. L'operazione di `groupingBy` dunque ritornerà una `Map< int, List<String> >` che associa ad ogni intero (= lunghezza della stringa) le parole lunghe quanto quell'intero.
+Partiamo da uno stream di stringhe e decidiamo di raggrupare tali tali stringhe per la loro lunghezza. L'operazione di `groupingBy` dunque ritornerà una `Map< int, List<String>>` che associa ad ogni intero (= lunghezza della stringa) le parole lunghe quanto quell'intero.
 
 Sotto forma di codice è qualcosa del genere:
 
 ```
-Map<Integer, List<String> > M =
+Map<Integer, List<String>> M =
 Stream.of(lyrics)
 .distinct()
 .collect(Collectors.groupingBy(String::length));
@@ -168,7 +168,7 @@ Rimaniamo coerenti con l'esempio di prima, di estrarre come chiave la lunghezza 
 )
 ```
 
-Aggiungiamo dunque un twist: piuttosto che semplicemente contare il numero di elementi per ogni stream prodotto, e dunque ottenere un risultato `long`, vogliamo che il valore di ritorno sia una `String` contenente il numero al suo interno. Questa è quella che chiamiamo **ulteriore operazione di mapping**, prima di inserire l'elemento nella mappa corrispondentemente alla chiave estreatta, lo modifichiamo un'ultima volta. Arriviamo quindi a
+Aggiungiamo dunque un twist: piuttosto che semplicemente contare il numero di elementi per ogni stream prodotto, e dunque ottenere un risultato `long`, vogliamo che il valore di ritorno sia una `String` contenente il numero al suo interno. Questa è quella che chiamiamo **ulteriore operazione di mapping**, prima di inserire l'elemento nella mappa corrispondentemente alla chiave estratta, lo modifichiamo un'ultima volta. Arriviamo quindi a
 
 4) specifichiamo il tipo di downstream di nostro interesse. Se questo è un downstream standard semplicemente invochiamo il corrispondente metodo della classe `Collectors`, altrimenti procediamo con `collectingAndThen()`, ottenendo qualcosa del tipo:
 

@@ -20,7 +20,7 @@ Supponiamo di avere a disposizione il numero esadecimale C3A8, ovvero 50088 in d
 
 1) `BufferedReader`, che legge da un buffer
 2) `CharArrayReader`, che legge da un array di caratteri
-3) `FilterReader`, che fornisce operazioni di lettura più avanzate, come quella di leggere una serie di caratteri e riposizionari nella sorgente immediatamente dopo la lettura (utile ad esempio per implementare il metodo `.find` della classe `Matcher` per le espressioni regolari)
+3) `FilterReader`, che fornisce operazioni di lettura più avanzate, come quella di leggere una serie di caratteri e riposizionarli nella sorgente immediatamente dopo la lettura (utile ad esempio per implementare il metodo `.find` della classe `Matcher` per le espressioni regolari)
 4) `InputStreamReader` permette di leggere da input. A sua volta è generalizzazione di un'altra classe, ovvero `FileReader`, che permette la lettura da file
 5) `PipedReader`, che legge da pipe
 6) `StringReader`, che legge da stringa

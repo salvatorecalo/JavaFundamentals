@@ -205,7 +205,7 @@ int sum = IntStream.range(0, 200)
 ).sum
 ```
 
-In questo modo verranno creati più oggetti della classe `Accumulator` i quali calcoleranno le somme parziali di elementi dello stream. Questi verranno poi man mano sommati in un unico oggetto di classe `Accumulator` il cui vlaore `.sum` viene salvato nella variabile `sum`, ottenendo la somma complessiva di tutti gli elementi dello stream.
+In questo modo verranno creati più oggetti della classe `Accumulator` i quali calcoleranno le somme parziali di elementi dello stream. Questi verranno poi man mano sommati in un unico oggetto di classe `Accumulator` il cui valore `.sum` viene salvato nella variabile `sum`, ottenendo la somma complessiva di tutti gli elementi dello stream.
 
 
 Chiaramente non è necessario perdere completamente traccia degli elementi dello stream: banalmente il nostro accumulatore potrebbe essere una `Collection` nella quale salvare gli elementi dello stream col metodo `.add`.

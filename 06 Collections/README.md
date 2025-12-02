@@ -6,7 +6,7 @@ Il limite di questo progetto è che la nostra è -appunto- una linked list, con 
 
 Siamo riusciti a costruirla in maniera relativamente facile dunque è altrettanto semplice concludere che gli sviluppatori del linguaggio Java hanno potuto fare cose ben più complesse e comode di quanto siamo riusciti a fare noi.
 
-Suddetti sviluppatori ci forniscono le `Collections`. `Collection` è un tipo in grado di contenere elementi, questo infatti implementa tutti i metodi propri di una struttura dati alla stregua di una linked list (ad esempio `.add()`, `.remove()`, `.removeIf()`, ecc...)
+I suddetti sviluppatori ci forniscono le `Collections`. `Collection` è un tipo in grado di contenere elementi, questo infatti implementa tutti i metodi propri di una struttura dati alla stregua di una linked list (ad esempio `.add()`, `.remove()`, `.removeIf()`, ecc...)
 
 Ovviamente anche le `Collections` sono tipizzate, e possiamo dunque scrivere cose come:
 
@@ -51,7 +51,7 @@ Un'altra sotto-interfaccia 'di `Set<E>` è `SortedSet<E>`, che può essere istan
 
 (un container di tipo `Set` può contenere un oggetto che implementa un `SortedSet`)
 
-E conesente di tenere in ordine gli elementi inseriti nel set.
+E consente di tenere in ordine gli elementi inseriti nel set.
 
 
 ### Queue
@@ -75,9 +75,9 @@ Può essere istanziato come:
 
 
 
-## Associative containters
+## Associative containers
 
-Sono `Collections` che non l'interfaccia `Iterable`, ma che di fatto implementano i 'dizionari': permettono l'associazione di una chiave ad un valore (infatti la loro tipizzazione prevede due parametri). Le interfaccie disponibili sono:
+Sono `Collections` che non implementano l'interfaccia `Iterable`, ma che di fatto implementano i 'dizionari': permettono l'associazione di una chiave ad un valore (infatti la loro tipizzazione prevede due parametri). Le interfaccie disponibili sono:
 
 1) `Map<K, V>`
 2) `SortedMap<K, V>`
@@ -90,7 +90,7 @@ Non implementanto l'interfaccia `Iterable`, permettono lo scorrimento dei propri
 1) `.entrySet()`, che ritorna un set contenente tutte le coppie chiave : valore
 
 Il tipo di dato salvato nella collezione ritornata dal metodo `.entrySet()` è `Map.Entry<K, V>`, con `<K, V>` che sono gli stessi del dizionario.
- 
+
 Un oggetto di tipo `Map.Entry<K, V>` possiede due metodi:
 ```
 public K getKey();

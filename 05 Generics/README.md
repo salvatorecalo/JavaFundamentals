@@ -48,7 +48,7 @@ la presenza del termine `<T>` è ciò che rende la nostra lista parametrica.
 
 Noi cioè andiamo a costruire una lista che gestirà elementi di tipo `T`, **qualunque esso sia**. I metodi all'interno della classe, gli iteratori in essa definiti, tutti forniscono e accettano valori di tipo `T`, nonostante questo non sia noto a priori.
 
-Peraltro osserviamo che la classe `List` implementa l'interfaccia `Iterable<T>`, ove la il parametro della lista e dell'iterabile coincidono. Per questa ragione siamo in grado di effettuare cicli for con il costrutto 
+Peraltro osserviamo che la classe `List` implementa l'interfaccia `Iterable<T>`, ove il parametro della lista e dell'iterabile coincidono. Per questa ragione siamo in grado di effettuare cicli for con il costrutto 
 
 ```
 List<Integer> L = new List<Integer>();
@@ -58,7 +58,7 @@ for (Integer i : L) {
 ```
 
 
-Vediamo poi come i due main forniti, presenti nei file `Generics_Integer` e `Generics_Complex` ambi istanzino una lista, ma lo facciano con parametri diversi:
+Vediamo poi come i due main forniti, presenti nei file `Generics_Integer` e `Generics_Complex` entrambi istanzino una lista, ma lo facciano con parametri diversi:
 ```
 List<Integer> L1 = new List<Integer>();
 List<Complex> L1 = new List<Complex>();

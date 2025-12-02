@@ -132,7 +132,7 @@ Per poterlo utilizzare non ci resta che passarne il riferimento come secondo par
 
 Anche in questo caso il metodo dovrebbe rispettare la stessa forma di quello presente nell'interfaccia funzionale, cioè dovrebbe essere:
 
-`public int comapre(Object o1, Object o2)`
+`public int compare(Object o1, Object o2)`
 
 ma se il riferimento ad esso viene inserito direttamente come parametro nella chiamata al metodo `.sort` non è necessario rispettare la dichiarazione di cui sopra a patto che il valore di ritorno sia sempre di tipo int e che il tipo dei parametri sia coerente con quello degli elementi all'interno del vettore.
 

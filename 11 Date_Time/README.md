@@ -38,7 +38,7 @@ Per quanto riguarda gli istanti di tempo la classe generale `Temporal`, implemen
 - `LocalTime` <- tempo locale
 - `ZonedTime` <- tempo locale, rispetto ad un'altra time-zone
 
-Instant si affida sistema operativo, ignorando eventuali time-zone geografiche.
+Instant si affida al sistema operativo, ignorando eventuali time-zone geografiche.
 
 Mentre per quanto riguarda gli intervalli di tempo abbiamo la classe generale `TemporalAmount`, implementata nelle 'sotto-classi':
 

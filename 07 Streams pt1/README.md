@@ -125,7 +125,7 @@ Stream.of(1, 2, 3);
 
 # Source generation
 
-È possibile voler creare un flusso di dati a partire da una qualche particolare proprietà. Un esempio di flusso di dati potrebbe essere la sequenza di Fibonacci: non vogliamo calcolarne ogni elemento fino all'iterazione n-esima, salvarlo in un vettore e poi convertire questo in un flusso, vogliamo piuttosto che il flusso stesso sia in grado di "determinare" il prossime elemento che deve produrre. È possibile fare ciò o cose simili a questa con particolari metodi.
+È possibile voler creare un flusso di dati a partire da una qualche particolare proprietà. Un esempio di flusso di dati potrebbe essere la sequenza di Fibonacci: non vogliamo calcolarne ogni elemento fino all'iterazione n-esima, salvarlo in un vettore e poi convertire questo in un flusso, vogliamo piuttosto che il flusso stesso sia in grado di "determinare" il prossimo elemento che deve produrre. È possibile fare ciò o cose simili a questa con particolari metodi.
 
 ## generate
 
@@ -193,10 +193,10 @@ OptionalDouble avg = IntStream
                     .average();
 ```
 
-Pet passare da un `IntStream` ad uno `Stream<T>` (cioè uno stream generico di oggetti) è possibile utilizzare il metodo `mapToObject` (esattamente come si farebbe con il metodo `.map` affrontato nel successivo pacchetto) convertendo ciascun `int` nello stream in un qualche tipo di oggetto.
+Per passare da un `IntStream` ad uno `Stream<T>` (cioè uno stream generico di oggetti) è possibile utilizzare il metodo `mapToObject` (esattamente come si farebbe con il metodo `.map` affrontato nel successivo pacchetto) convertendo ciascun `int` nello stream in un qualche tipo di oggetto.
 
 
 
 ## empty
 
-A differenza degli altri questo metodo non permette la creazione di un flusso con particolari prorietà, piuttosto ne crea uno vuoto.
+A differenza degli altri questo metodo non permette la creazione di un flusso con particolari proprietà, piuttosto ne crea uno vuoto.

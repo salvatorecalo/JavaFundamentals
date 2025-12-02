@@ -17,7 +17,7 @@ non compila perché Arrays.sort si aspetta un `Comparator`, cioè qualcosa che a
 
 # Soluzioni convenzionali
 
-Ci sono diveri metodi per risolvere il problema, procediamo ad elencarli
+Ci sono diversi metodi per risolvere il problema, procediamo ad elencarli
 
 
 
